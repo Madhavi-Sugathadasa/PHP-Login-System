@@ -10,9 +10,9 @@ class User {
 
 	private $con;
 
-	public $user_id;
-	public $email;
-	public $reg_time;
+	private $user_id;
+	private $email;
+	private $reg_time;
 
 	public function __construct(int $user_id) {
 		$this->con = DB::getConnection();
@@ -36,7 +36,14 @@ class User {
 		}
 	}
 
-	
+	 public function getEmail()
+     {
+        return $this->email;
+     }
+    public function  getRegTime()
+    {
+        return $this->reg_time;
+    }
 
 	public static function Find($email, $return_assoc = false) {
 

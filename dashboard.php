@@ -29,7 +29,7 @@
 
   	<div class="uk-section uk-container">
   		<h2>Dashboard</h2>
-      <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+      <p>Hello <?php echo $User->getEmail(); ?>, you registered at <?php echo $User->getRegTime(); ?></p>
       <p><a href="/logout.php">Logout</a></p>
   	</div>
 
